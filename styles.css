@@ -4,6 +4,44 @@
     font-family: 'Poiret One';
 }
 
+.preload {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #77b3d4;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plane {
+    height: 55vmin;
+    animation: plane 1.5s ease-in-out infinite alternate;
+}
+
+.cloud {
+    height: 7rem;
+    position: absolute;
+    right: -30vw;
+    z-index: -1;
+}
+
+#cloud1{
+    top: 12vh;
+    animation: clouds 3s linear infinite;
+}
+#cloud2{
+    top: 50vh;
+    animation: clouds 3s linear infinite 1.6s;
+}
+#cloud3{
+    top: 80vh;
+    animation: clouds 3s linear infinite 0.7s;
+}
+
 .background {
     width: 100vw;
     height: 100vh;
@@ -32,7 +70,7 @@
         background-position: center;
         background-size: 100vh;
         color: white;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: flex-end;
     }
     .social a, .background h1 {
@@ -40,18 +78,22 @@
     }
 }
 
-header, footer {
-    width: 100vw;
-    background: black;
-    height: 8vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
+@keyframes plane {
+    from {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-50px);
+        -webkit-transform: translateY(-50px);
+    }
 }
 
-footer a {
-    margin: 0.5rem;
-    text-decoration: none;
-    color: white;
+@keyframes clouds {
+    from {
+        right: -30vw;
+    }
+    to {
+         right: 130vw;
+    }
 }
