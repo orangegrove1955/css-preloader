@@ -4,9 +4,9 @@ This project is a CSS preloader, following along with a tutorial from Dev Ed, in
 
 # What I learned
 - CSS vmin
-- CSS @media for mobile screens
+- CSS @media combined with orientation: landscape
+- Different background images for different screen rotations
 - Flex column reverse
-- Different background images at different screen sizes
 - CSS keyframes
 - CSS animation basics with infinite loop, alternate and ease-in-out
 
