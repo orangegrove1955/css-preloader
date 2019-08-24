@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poiret One';
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(./img/land-desktop.jpg);
+}
+
+.social, .background h1 {
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+.social a {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width:768px) {
+    .background{
+        background-image: url(./img/land-mobile.jpg);
+        background-position: center;
+        background-size: 100vh;
+        color: white;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .social a, .background h1 {
+        color: white;
+    }
+}
+
+header, footer {
+    width: 100vw;
+    background: black;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+footer a {
+    margin: 0.5rem;
+    text-decoration: none;
+    color: white;
+}
