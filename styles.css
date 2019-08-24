@@ -15,6 +15,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: opacity 1s ease 0.2s;
+}
+
+.preload-finished{
+    opacity: 0;
+    pointer-events: none;
 }
 
 .plane {
@@ -22,10 +28,14 @@
     animation: plane 1.5s ease-in-out infinite alternate;
 }
 
+.plane-finished {
+    animation: flyout 1s ease;
+}
+
 .cloud {
     height: 7rem;
     position: absolute;
-    right: -30vw;
+    right: -100vw;
     z-index: -1;
 }
 
@@ -95,5 +105,14 @@
     }
     to {
          right: 130vw;
+    }
+}
+
+@keyframes flyout{
+    from {
+        transform: translateX(0vw);
+    }
+    to {
+        transform: translateX(100vw);
     }
 }
